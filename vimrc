@@ -12,6 +12,8 @@ silent! call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
+let mapleader = ";"
+
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc

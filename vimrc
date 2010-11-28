@@ -14,10 +14,6 @@ syntax on
 
 let mapleader = ";"
 
-" Tab completion
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc
-
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 

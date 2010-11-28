@@ -17,3 +17,17 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+" shortcut for closing buffers
+map <Leader>w :bd<CR>
+
+" Map Command-[/] to outdent/indent in normal mode
+nmap <D-[> <<
+nmap <D-]> >>
+
+" Map Command-[/] to outdent/indent in visual mode
+vmap <D-[> <gv
+vmap <D-]> >gv
+
+imap <D-[> <C-o><<
+imap <D-]> <C-o>>>

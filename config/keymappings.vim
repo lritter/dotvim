@@ -31,3 +31,12 @@ vmap <D-]> >gv
 
 imap <D-[> <C-o><<
 imap <D-]> <C-o>>>
+
+" Emacs-ish 'jump to end of line' in insert mode
+imap <C-e> <C-o>A
+
+" Emacs-ish 'jump to first char in line' in insert mode
+imap <C-a> <C-o>^
+
+" Emacs-ish 'jump to very begining of line' in insert mode
+imap <C-A> <C-o>0

@@ -29,6 +29,10 @@ if has("gui_macvim")
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<nop>
   map <C-D-F> :Ack<Space>
 
+
+  "macmenu Edit.Paste key=<nop>
+
+  set guifont=Menlo:h12
 endif
 
 " Default gui color scheme

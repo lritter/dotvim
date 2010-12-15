@@ -40,3 +40,6 @@ imap <C-a> <C-o>^
 
 " Emacs-ish 'jump to very begining of line' in insert mode
 imap <C-A> <C-o>0
+
+" Key combo for wrapping text
+imap <C-q> <C-o>gq <CR>

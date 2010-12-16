@@ -42,4 +42,4 @@ imap <C-a> <C-o>^
 imap <C-A> <C-o>0
 
 " Key combo for wrapping text
-imap <C-q> <C-o>gq <CR>
+imap <C-q> <C-o>gq{

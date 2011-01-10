@@ -5,6 +5,9 @@ au FileType python                                   set noexpandtab
 " Thorfile, Rakefile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 
+" Treat JSON like Javascript
+autocmd BufRead,BufNewFile *.json set filetype=javascript
+
 " Helper function to setup text wrapping
 function s:setupWrapping()
   set wrap

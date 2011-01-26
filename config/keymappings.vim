@@ -18,8 +18,11 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
-" shortcut for closing buffers
-map <Leader>w :bd<CR>
+" shortcut for closing buffers while keeping the window layout
+map <Leader>w <Plug>Kwbd
+
+" shortcut for closing buffer and killing the buffers window
+map <Leader>W :bd<CR>
 
 " Map Command-[/] to outdent/indent in normal mode
 nmap <D-[> <<

@@ -46,3 +46,6 @@ imap <C-A> <C-o>0
 
 " Key combo for wrapping text
 imap <C-q> <C-o>gq{
+
+" RSpec
+"map <Leader>spec :! bundle exec rspec -f d --no-color %<CR>

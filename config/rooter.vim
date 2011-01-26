@@ -1,0 +1,3 @@
+" Configure vim rooter
+
+

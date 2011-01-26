@@ -21,9 +21,11 @@ if has("gui_macvim")
   " key combos cycle through buffers instead. 
   macm Window.Select\ Previous\ Tab key=<nop>
   map <D-{> :bp<CR>
+  imap <D-{> <ESC>:bp<CR>
 
   macm Window.Select\ Next\ Tab key=<nop>
   map <D-}> :bn<CR>
+  imap <D-}> <ESC>:bn<CR>
 
   " Enable Ctrl-Shift-f to run :Ack command
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<nop>

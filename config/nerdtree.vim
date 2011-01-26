@@ -3,9 +3,12 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 
 " Project Tree
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
+function s:SetupAutoTree()
+  "autocmd VimEnter * NERDTree
+  "autocmd VimEnter * wincmd p
+  autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
+endfunction
+call s:SetupAutoTree()
 
 " Disable netrw's autocmd, since we're ALWAYS using NERDTree
 runtime plugin/netRwPlugin.vim
@@ -101,3 +104,30 @@ call s:DefineCommand("touch", "Touch")
 call s:DefineCommand("rm", "Remove")
 call s:DefineCommand("e", "Edit")
 " End Project Tree
+
+" This function allows for auto-quiting NERDTree buffers on a quit
+" command.  
+function! NERDTreeQuit()
+  redir => buffersoutput
+  silent buffers
+  redir END
+"                     1BufNo  2Mods.     3File           4LineNo
+  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+  let windowfound = 0
+
+  for bline in split(buffersoutput, "\n")
+    let m = matchlist(bline, pattern)
+
+    if (len(m) > 0)
+      if (m[2] =~ '..a..')
+        let windowfound = 1
+      endif
+    endif
+  endfor
+
+  if (!windowfound)
+    quitall
+  endif
+endfunction
+autocmd WinEnter * call NERDTreeQuit()
+

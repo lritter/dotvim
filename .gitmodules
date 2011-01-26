@@ -43,3 +43,9 @@
 [submodule "bundle/vim-textobj-rubyblock"]
 	path = bundle/vim-textobj-rubyblock
 	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "bundle/kwbdi"]
+	path = bundle/kwbdi
+	url = git://github.com/vim-scripts/kwbdi.vim.git
+[submodule "bundle/rooter"]
+	path = bundle/rooter
+	url = git://github.com/airblade/vim-rooter.git

@@ -38,7 +38,10 @@ if has("gui_macvim")
 endif
 
 " Default gui color scheme
-color twilight 
+"color twilight 
+syntax enable
+set background=dark
+colorscheme solarized
 
 " ConqueTerm wrapper
 function StartTerm()
